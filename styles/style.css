@@ -5,7 +5,63 @@
 body{
     font-family: 'Poppins', sans-serif; 
     background: #F3F1FF;
+    margin: 0;
 }
+/*----------------
+    header start
+ -----------------*/
+ header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 94px;
+    background: #562EFF;
+  }
+.header-nav{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    /* width: 870px; */
+    align-items: center;
+    /* justify-content: space-between; */
+    
+
+}
+.logo{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.logo img{
+    width: 40px;
+    height: 51px;
+}
+.logo p{
+    color: #FFF;
+    font-size: 24px;
+}
+.profile{
+    display: flex;
+    gap: 36px;
+}
+.nav-link ul{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    gap: 36px;
+}
+
+.nav-link ul li a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*----------------
+    header end
+ -----------------*/
 main{
     display: flex;
     flex-direction: column;
@@ -96,8 +152,11 @@ hr{
 
 /* courses styles */
 .courses{
-   display: flex;
-   gap: 24px;
+   /* display: flex;
+   gap: 24px; */
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 24px;
 }
 .course{
     width: 252px;
@@ -105,14 +164,14 @@ hr{
     background-color:#fff;
     border-radius: 5px;
     padding: 15px;
-    
 }
 .course-title{
     color: #1E1E1E;
     font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
-    margin: 0px
+    margin: 0px;
+    padding-top:15px;
 }
 .course-author{
     color: #ED6B4F;
@@ -150,7 +209,8 @@ hr{
     margin-left: 16px;
     margin-right: 25px;
 }
-.course-duration{    width: 95px;
+.course-duration{    
+    width: 95px;
     height: 30px;
     border-radius: 14px;
     background:#FFE4E8;
@@ -161,4 +221,80 @@ hr{
     align-content: center;
     gap:5px;
 
+}
+
+/*----------
+media queries
+------------*/
+/* mobile devices */
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+
+/* hdeadr for mobile */
+
+header{
+    /* display: none; */
+}
+/* header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100px;
+    background: #562EFF;
+  }
+.header-nav{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.logo img{
+    width: 25px;
+    height: 25px;
+}
+.logo p{
+    color: #FFF;
+    font-size: 16   px;
+}
+.profile{
+    display: flex;
+    gap: 6px;
+}
+.nav-link ul{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    gap: 6px;
+} */
+
+
+/* header end */
+
+
+}
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width: 992px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+    
 }
